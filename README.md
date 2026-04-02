@@ -2,7 +2,8 @@
 
 ABCDigits is a synthetic key-value retrieval test for evaluating long-context retrieval ability in a controlled, semantics-free setting.
 
-This repository provides text-generation utilities for constructing ABCDigits examples as described in our paper.
+This repository provides text-generation utilities for constructing ABCDigits examples as described in our paper, *Screening Is Enough*:
+https://arxiv.org/abs/2604.01178
 
 ## Overview
 
