@@ -1,0 +1,7 @@
+[project]
+name = "abcdigits"
+version = "0.1.0"
+description = "ABCDigits: a semantics-free synthetic key-value retrieval benchmark for language models"
+readme = "README.md"
+requires-python = ">=3.6"
+dependencies = []
