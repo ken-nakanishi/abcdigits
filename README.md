@@ -37,8 +37,8 @@ To construct the evaluation input, remove the last n_digits characters from the 
 ```python
 n_digits = 6
 txts = generate_by_line_count(n_lines=2**6, depth=0.1, n_digits=n_digits, n_trials=1000)
-prompt_txts = [t[:n_digits] for t in txts]
-answer_txts = [t[n_digits:] for t in txts]
+prompt_txts = [t[:-n_digits] for t in txts]
+answer_txts = [t[-n_digits:] for t in txts]
 ```
 
 ### Fixing the number of tokens (approximately)
@@ -47,8 +47,8 @@ answer_txts = [t[n_digits:] for t in txts]
 n_digits = 6
 tokenizer = GPT2TokenizerFast.from_pretrained('gpt2')
 txts = generate_by_token_count(n_tokens=400, depth=0.1, tokenizer=tokenizer, n_digits=n_digits, n_trials=1000)
-prompt_txts = [t[:n_digits] for t in txts]
-answer_txts = [t[n_digits:] for t in txts]
+prompt_txts = [t[:-n_digits] for t in txts]
+answer_txts = [t[-n_digits:] for t in txts]
 ```
 
 ## Notes
