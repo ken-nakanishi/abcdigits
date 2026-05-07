@@ -35,6 +35,8 @@ To construct the evaluation input, remove the last n_digits characters from the 
 ### Fixing the number of lines
 
 ```python
+from abcdigits import generate_by_line_count
+
 n_digits = 6
 txts = generate_by_line_count(n_lines=2**6, depth=0.1, n_digits=n_digits, n_trials=1000)
 prompt_txts = [t[:-n_digits] for t in txts]
@@ -45,6 +47,7 @@ answer_txts = [t[-n_digits:] for t in txts]
 
 ```python
 from transformers import AutoTokenizer
+from abcdigits import generate_by_token_count
 
 n_digits = 6
 tokenizer = AutoTokenizer.from_pretrained('gpt2')
