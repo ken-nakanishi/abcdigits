@@ -50,7 +50,7 @@ from transformers import AutoTokenizer
 from abcdigits import generate_by_token_count
 
 n_digits = 6
-tokenizer = AutoTokenizer.from_pretrained('gpt2')
+tokenizer = AutoTokenizer.from_pretrained("gpt2")
 txts = generate_by_token_count(n_tokens=400, depth=0.1, tokenizer=tokenizer, n_digits=n_digits, n_trials=1000)
 prompt_txts = [t[:-n_digits] for t in txts]
 answer_txts = [t[-n_digits:] for t in txts]
